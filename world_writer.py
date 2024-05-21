@@ -96,7 +96,7 @@ class WorldWriter():
     ))
     self.file.write('\n')
     
-    self.cylinder_list.append([pos_x, pos_y, pos_z, rot_a, rot_b, rot_c])
+    self.cylinder_list.append([pos_y, -pos_x, pos_z, rot_a, rot_b, rot_c])
     self.num_cylinders += 1
 
   def _write_mid_boiler(self):

@@ -17,7 +17,7 @@
           <geometry>
             <cylinder>
               <radius>%f</radius>
-              <length>1</length>
+              <length>0.5</length>
             </cylinder>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -38,7 +38,7 @@
           <geometry>
             <cylinder>
               <radius>%f</radius>
-              <length>1</length>
+              <length>0.5</length>
             </cylinder>
           </geometry>
 	  <material>

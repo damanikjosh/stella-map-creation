@@ -1,4 +1,4 @@
-# jackal-map-creation
+# stella-map-creation
 This repo contains the code used to generate the dataset
 for the [Benchmarking Metric Ground Navigation](https://arxiv.org/pdf/2008.13315.pdf) paper and can be modified
 to generate new datasets for robots of different footprints.

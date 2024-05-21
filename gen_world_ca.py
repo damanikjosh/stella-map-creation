@@ -22,10 +22,10 @@ pgm_res = 0.15 # meters per pixel
 infl_rad = 0.3 # meters
 
 # radius of cylinders in the .world file
-cyl_radius = 0.075
+cyl_radius = 0.03
 
 # length of containment wall, in meters
-contain_wall_length = 5
+contain_wall_length = 2
 
 # class to generate occupancy grids using cellular automaton
 class ObstacleMap():
@@ -170,12 +170,15 @@ class JackalMap:
   def regions_connected(self, regionA, regionB):
     for r in range(len(regionA)):
       for c in range(len(regionA[0])):
-        if regionA[r][c] != regionB[r][c]:
+        try:
+          if regionA[r][c] != regionB[r][c]:
+            return False
+          elif regionA[r][c] == 1 and regionB[r][c] == 1:
+            return True
+        except:
           return False
 
         # if they share any common spaces, they're connected
-        elif regionA[r][c] == 1 and regionB[r][c] == 1:
-          return True
 
     return False
 
